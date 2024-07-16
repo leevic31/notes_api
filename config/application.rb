@@ -6,8 +6,6 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-Dotenv::Rails.load
-
 module NotesApi
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -32,5 +30,11 @@ module NotesApi
     config.api_only = true
 
     config.middleware.use Rack::Attack
+
+    # Load dotenv in development and test environments
+    if ['development', 'test'].include?(Rails.env)
+      require 'dotenv'
+      Dotenv.load('.env')
+    end
   end
 end
