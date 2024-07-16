@@ -20,7 +20,7 @@
 
 * Install dependencies
   ```
-    bundle install
+  bundle install
   ```
 
 * Database creation
@@ -64,10 +64,10 @@
   ```
   rails test test/controllers/api/share_notes_controller_test.rb
   ```
-  
+
 * Start the server
   ```
-    rails server
+  rails server
   ```
 
 * API documentation
