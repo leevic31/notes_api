@@ -36,5 +36,7 @@ module NotesApi
       require 'dotenv'
       Dotenv.load('.env')
     end
+
+    config.api_only = true
   end
 end
