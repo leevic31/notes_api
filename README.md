@@ -1,19 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Technology Choices
+  
+  Framework: Ruby on Rails
+  - this is the framework I was most comfortable with and allowed me to be the most productive
 
-Things you may want to cover:
+  DB: Postgresql
+  - postgresql supports text-indexing, while other options like sqllite did not
+  - postgresql is required for the project to be hosted on Render
+
+  3rd party tools
+  - used the gem jwt for authentication and authorization
+  - used the gem bcrypt for password-hashing
+  - used the gem pg_search for text-indexing for the search method
+  - used the gem rack-attack for rate-limiting and request throttling
 
 * Ruby version
+  3.0.2
 
-* System dependencies
-
-* Configuration
+* Install dependencies
+  ```
+    bundle install
+  ```
 
 * Database creation
+  ```
+  rails db:create
+  ```
 
 * Database initialization
+  ```
+  rails db:migrate
+  ```
 
 * Setting up environment variables
   1. Create a **.env** file in the root of the project
@@ -46,8 +64,16 @@ Things you may want to cover:
   ```
   rails test test/controllers/api/share_notes_controller_test.rb
   ```
-* Services (job queues, cache servers, search engines, etc.)
+  
+* Start the server
+  ```
+    rails server
+  ```
 
-* Deployment instructions
+* API documentation
+  https://documenter.getpostman.com/view/37003772/2sA3kRJPJw
 
-* ...
+* Deployment Link
+  https://notes-api-j7t4.onrender.com
+
+  Note: this API has been deployed on Render but the link does not display anything
