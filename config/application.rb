@@ -38,5 +38,7 @@ module NotesApi
     end
 
     config.api_only = true
+
+    config.require_master_key = true
   end
 end
